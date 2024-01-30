@@ -18,26 +18,7 @@ kubectl apply -k operator
 kubectl get pods -n awx
 ```
 
-- To verify the deployment ran and see all resources in the awx namespace and their status run:
 
-```bash
- kubectl -n awx get all
-```
-
-- You should see an output similar to:
-
-```bash
-NAME                                                   READY   STATUS    RESTARTS   AGE
-pod/awx-operator-controller-manager-68d787cfbd-kjfg7   2/2     Running   0          16s
-
-NAME                                                      TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
-service/awx-operator-controller-manager-metrics-service   ClusterIP   10.43.150.245   <none>        8443/TCP   16s
-
-NAME                                              READY   UP-TO-DATE   AVAILABLE   AGE
-deployment.apps/awx-operator-controller-manager   1/1     1            1           16s
-
-NAME                                                         DESIRED   CURRENT   READY   AGE
-replicaset.apps/awx-operator-controller-manager-68d787cfbd   1         1         1       16s
 ```
 
 ## Prepare required files to deploy AWX
