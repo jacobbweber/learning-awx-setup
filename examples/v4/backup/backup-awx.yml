@@ -6,9 +6,4 @@ metadata:
   namespace: awx-demo
 spec:
   deployment_name: awx
-  backup_pvc: backup-pv2-claim
-
-resources:
- - pvc.yml
-  # Uncomment to reveal "censored" logs
-  # no_log: false
+  backup_pvc: backup-pv1-claim

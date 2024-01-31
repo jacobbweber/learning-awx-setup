@@ -3,10 +3,14 @@ apiVersion: v1
 kind: PersistentVolume
 metadata:
   name: backup-pv
+  labels:
+    purpose: backup-pv
+  annotations:
+    description: "learning pv and pvcs"
 spec:
   accessModes:
     - ReadWriteOnce
   capacity:
     storage: 5Gi
   hostPath:
-    path: /data/pv0001/
+    path: /data/backup/

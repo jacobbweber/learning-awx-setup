@@ -10,4 +10,7 @@ spec:
   resources:
     requests:
       storage: 5Gi
-  storageClassName: billy
+  storageClassName: ""
+  selector:
+    matchLabels:
+      purpose: backup-pv
